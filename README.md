@@ -1,7 +1,7 @@
 Fun legal fishing script for your server!, built to get as realistic a fishing script as **possible**
 
 [Video](https://www.youtube.com/watch?v=ZAZYldAOYl0)
-[Tebex](https://uggish-store.tebex.io/)
+
 
 # Features
 * **Catch 3 Fish Items**
