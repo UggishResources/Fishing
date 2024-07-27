@@ -33,5 +33,4 @@ Fun legal fishing script for your server!, built to get as realistic a fishing s
 * qb-core 
 * ox_lib
 * ox_target & qb-target 
-# Locked Files
-All files are locked except for Config/En.lua, ensuring that no one can steal scripts or various codes, providing security.
+
