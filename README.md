@@ -33,4 +33,5 @@ Fun legal fishing script for your server!, built to get as realistic a fishing s
 * qb-core 
 * ox_lib
 * ox_target & qb-target 
-
+# Support
+https://discord.gg/qkxM9sq63p
