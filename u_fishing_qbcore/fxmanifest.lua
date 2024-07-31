@@ -8,7 +8,7 @@ description 'Fishing Script Made by Uggish Resources.'
 shared_scripts{
     'config.lua',
     '@qb-core/shared/locale.lua',
-    'locales/en.lua',
+    'locales/en.lua', -- set this to "locales/sv.lua" if you want to use Swedish translations.
     'locales/*.lua',
     '@ox_lib/init.lua'
 }
