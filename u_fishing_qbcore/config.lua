@@ -12,6 +12,10 @@ Config.Fishing = {
     MaxMenuDistance = 1, -- How much distance you want to get up the menu --
   }, 
 
+  DrawMarker = {
+    vec3(1337.69, 4225.57, 33.92)
+  },
+
   Timeouts = {
     Timeout = 60000, -- How long you can fish after you have caught the number of fish you have set you can fish before Timoeut. --
     FishTimeout = 1,-- Add here how many times you want one to wait before they can fish again --
@@ -54,7 +58,7 @@ Config.Fishing = {
     PictureTre = 'https://purepng.com/public/uploads/large/purepng.com-fishfoodfishanimalseamarineoceanseafoodaquatic-981524648553bwzqr.png',
   },
   Money = 'cash', -- Set this to "bank" instead if you want to have your money in bank --
-  Target = 'ox_target' -- Set it to 'qb-target' if you want to have qb-target! --
+  Target = 'ox_target' -- Dont Change! --
 }
 
 

@@ -66,24 +66,6 @@ if Config.Fishing.Target == 'ox_target' then
             }
         }
     })
-elseif Config.Fishing.Target == 'qb-target' then
-    exports['qb-target']:AddTargetEntity(ped, {
-        options = {
-            {
-                type = "client",
-                event = "uggishresources:client:fishingmenu",
-                icon = "fas fa-fish",
-                label = Lang:t('info.fish_menu_headertext'),
-                canInteract = function(entity)
-                    local playerCoords = GetEntityCoords(PlayerPedId())
-                    local pedCoords = GetEntityCoords(entity)
-                    local distance = #(playerCoords - pedCoords)
-                    return distance <= Config.Fishing.MaxMenuDistance
-                end
-            }
-        },
-        distance = 2.5
-    })
 end
 
 
@@ -232,8 +214,7 @@ end)
 
 
 Citizen.CreateThread(function()
-    local center = vec3(1337.69, 4225.57, 33.92)
-     
+    local center = Config.Fishing.DrawMarker
     local point = lib.points.new({
         coords = center,
         distance = 20,
@@ -263,7 +244,7 @@ Citizen.CreateThread(function()
                     type = 'success',
                     wait = 5000
                 })
-                startFishing()  -- Assuming this function starts the fishing process
+                startFishing()  
             else 
                 lib.notify({
                     description = Lang:t('error.no_fishingrod'),
