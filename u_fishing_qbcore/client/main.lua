@@ -49,8 +49,7 @@ end)
         lib.showContext('uggishfishing_menu')
     end)
 
-    -- Targets
-if Config.Fishing.Target == 'ox_target' then
+    -- Target
     exports.ox_target:addBoxZone({
         coords = Config.Fishing.TargetPosition,
         size = vec3(2, 2, 2),
@@ -65,8 +64,6 @@ if Config.Fishing.Target == 'ox_target' then
             }
         }
     })
-end
-
 
 RegisterNetEvent('u-fishing:client:FishesMenu', function(fishCounts)
     lib.registerContext({
