@@ -7,14 +7,10 @@ Config.Fishing = {
 
   FishPed = {
     PedModel = 'mp_m_exarmy_01', -- Ped Model --
-    Position = vector3(1303.84, 4230.57, 33.91), -- Position on Ped --
+    Position = vector3(-1849.89, -1230.43, 13.02), -- Position on Ped --
     PedHeading = 10.0,
     MaxMenuDistance = 1, -- How much distance you want to get up the menu --
   }, 
-
-  DrawMarker = {
-    vec3(1337.69, 4225.57, 33.92)
-  },
 
   Timeouts = {
     Timeout = 60000, -- How long you can fish after you have caught the number of fish you have set you can fish before Timoeut. --
@@ -40,6 +36,8 @@ Config.Fishing = {
   { name = 'Large Fish', Size = 3, MinChance = 81, MaxChance = 100, Weight = { min = 1, max = 1 } }, -- Large Fish Settings --
   },
 
+  DrawMarker = vector3(-1849.89, -1230.43, 13.02),
+
   BlipSettings = {
   Blips = {
       vector3(1337.62, 4225.45, 33.92), -- Position on Blip --
@@ -58,7 +56,8 @@ Config.Fishing = {
     PictureTre = 'https://purepng.com/public/uploads/large/purepng.com-fishfoodfishanimalseamarineoceanseafoodaquatic-981524648553bwzqr.png',
   },
   Money = 'cash', -- Set this to "bank" instead if you want to have your money in bank --
-  Target = 'ox_target' -- Dont Change! --
+  Target = 'ox_target', -- Dont change --
+  TargetPosition = vector3(-1849.98, -1229.38, 13.02) -- Target Position!
 }
 
 

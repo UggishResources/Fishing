@@ -1,5 +1,4 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local menuOpen = false
 local fishingSpot = Config.Fishing.FishingPosition[i]
 local FishTypes = Config.Fishing.FishTypes
 local pedCoords = Config.Fishing.FishPed.Position
@@ -53,7 +52,7 @@ end)
     -- Targets
 if Config.Fishing.Target == 'ox_target' then
     exports.ox_target:addBoxZone({
-        coords = vec3(1303.39, 4228.95, 33.08),
+        coords = Config.Fishing.TargetPosition,
         size = vec3(2, 2, 2),
         rotation = 45,
         debug = drawZones,
@@ -215,6 +214,7 @@ end)
 
 Citizen.CreateThread(function()
     local center = Config.Fishing.DrawMarker
+     
     local point = lib.points.new({
         coords = center,
         distance = 20,
@@ -244,7 +244,7 @@ Citizen.CreateThread(function()
                     type = 'success',
                     wait = 5000
                 })
-                startFishing()  
+                startFishing()  -- Assuming this function starts the fishing process
             else 
                 lib.notify({
                     description = Lang:t('error.no_fishingrod'),
