@@ -57,7 +57,7 @@ Config.Fishing = {
   },
   Money = 'cash', -- Set this to "bank" instead if you want to have your money in bank --
   Target = 'ox_target', -- Dont change --
-  TargetPosition = vector3(-1849.98, -1229.38, 13.02) -- Target Position!
+  TargetPosition = vector3(-1849.98, -1229.38, 13.02) -- Target Position --
 }
 
 
