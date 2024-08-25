@@ -119,3 +119,19 @@ AddEventHandler('u-fishing:server:FishingSellItemsTre', function()
 end
 end)
 
+RegisterNetEvent('u-fishing:server:FishingRod')
+AddEventHandler('u-fishing:server:FishingRod', function()
+    local src = source 
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    if Player then 
+        local FishingRoditem = Config.Fishing.FishingItems[4]
+        if FishingRoditem then 
+            Player.Functions.AddItem(FishingRoditem, 1)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add') 
+        end
+
+        TriggerClientEvent('u-fishing:client:ShowFishingrodNoti', src)
+   end
+end)
+

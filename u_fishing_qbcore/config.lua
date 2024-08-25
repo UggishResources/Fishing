@@ -1,9 +1,7 @@
 Config = {}
 
 Config.Fishing = {
-  FishingPosition = {
-    vector3(1338.26, 4225.35, 33.92), -- Change to opintial position here if you want. --
-  },
+  FishingPosition = vector3(1338.26, 4225.35, 33.92), -- Change to opintial position here if you want. --
 
   FishPed = {
     PedModel = 'mp_m_exarmy_01', -- Ped Model --
@@ -17,11 +15,14 @@ Config.Fishing = {
     FishTimeout = 1,-- Add here how many times you want one to wait before they can fish again --
   },
 
+  Target = vector3(-1849.98, -1229.38, 13.02),
+  DrawMarker = vector3(-1849.89, -1230.43, 13.02),
+
   FishingItems = {
     [1] = 'fishitem1',
     [2] = 'fishitem2',
     [3] = 'fishitem3',
-    FishingRod = 'fishingrod', -- FishingRod Item --
+    [4] = 'fishingrod', -- FishingRod Item --
   },
 
   FishingPrices = {
@@ -36,18 +37,6 @@ Config.Fishing = {
   { name = 'Large Fish', Size = 3, MinChance = 81, MaxChance = 100, Weight = { min = 1, max = 1 } }, -- Large Fish Settings --
   },
 
-  DrawMarker = vector3(-1849.89, -1230.43, 13.02),
-
-  BlipSettings = {
-  Blips = {
-      vector3(1337.62, 4225.45, 33.92), -- Position on Blip --
-  },
-   TextOnMap = 'Fishing', -- Text on Blip --
-   ShowBlips = true, -- Set it to ShowBlips = false if you not want to have a blip on the map --
-   BlipModel = 398, -- Blip Model --
-   BlipColour = 2, -- Blip Colour --
-  },
-
   SkillCheck = {'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'easy'}, {'w', 'a', 's'}, -- Skillcheck Settings --
 
   Pictures = {
@@ -55,12 +44,28 @@ Config.Fishing = {
     PictureTwo = 'https://purepng.com/public/uploads/large/purepng.com-fishfoodfishanimalseamarineoceanseafoodaquatic-981524648553bwzqr.png',
     PictureTre = 'https://purepng.com/public/uploads/large/purepng.com-fishfoodfishanimalseamarineoceanseafoodaquatic-981524648553bwzqr.png',
   },
+  
   Money = 'cash', -- Set this to "bank" instead if you want to have your money in bank --
-  TargetPosition = vector3(-1849.98, -1229.38, 13.02) -- Target Position --
 }
 
 
-
+Config.BlipSettings = {
+  {
+    Blip = vector3(-1849.67, -1229.41, 13.02),
+    TextOnMap = 'Fishing',
+    BlipModel = 398,
+    BlipColour = 2,
+    showBlips = true,
+  },
+  -- Below is an example of how to add more "blips":)
+--[[     {
+    Blip = vector3(-1849.67, -1229.41, 13.02),
+    TextOnMap = 'Sell Fishes',
+    BlipModel = 398,
+    BlipColour = 2,
+    showBlips = true,
+  } ]]
+}
 
 
 

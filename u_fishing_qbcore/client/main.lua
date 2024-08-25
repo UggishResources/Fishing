@@ -1,5 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local fishingSpot = Config.Fishing.FishingPosition[i]
+local fishingSpot = Config.Fishing.FishingPosition
 local FishTypes = Config.Fishing.FishTypes
 local pedCoords = Config.Fishing.FishPed.Position
 local fishing = false
@@ -51,7 +51,7 @@ end)
 
     -- Target
     exports.ox_target:addBoxZone({
-        coords = Config.Fishing.TargetPosition,
+        coords = Config.Fishing.Target,
         size = vec3(2, 2, 2),
         rotation = 45,
         debug = drawZones,
@@ -335,19 +335,23 @@ function startFishing()
 end
 
 Citizen.CreateThread(function()
-    Citizen.Wait(0)
-    if Config.Fishing.BlipSettings.ShowBlips then
-        for i = 1, #Config.Fishing.BlipSettings.Blips, 1 do
-            local blipCoords = Config.Fishing.BlipSettings.Blips[i]
-            local uBlip = AddBlipForCoord(blipCoords.x, blipCoords.y, blipCoords.z)
-            SetBlipAsShortRange(uBlip, true)
-            SetBlipColour(uBlip, Config.Fishing.BlipSettings.BlipColour)
-            SetBlipSprite(uBlip, Config.Fishing.BlipSettings.BlipModel)
+    Citizen.Wait(10)
+
+    for _, blipConfig in pairs(Config.BlipSettings) do 
+        if blipConfig.showBlips then 
+
+            local blipCoords = blipConfig.Blip
+            local uggishresourcesBlip = AddBlipForCoord(blipCoords.x, blipCoords.y, blipCoords.z)
+
+            SetBlipAsShortRange(uggishresourcesBlip, true)
+            SetBlipColour(uggishresourcesBlip, blipConfig.BlipColour)
+            SetBlipSprite(uggishresourcesBlip, blipConfig.BlipModel)
             BeginTextCommandSetBlipName("STRING")
-            AddTextComponentString(Config.Fishing.BlipSettings.TextOnMap)
-            EndTextCommandSetBlipName(uBlip)
+            AddTextComponentString(blipConfig.TextonMap)
+            EndTextCommandSetBlipName(uggishresourcesBlip)
         end
     end
 end)
+
 
 
